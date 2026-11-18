@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "zurritestdemod:bloque_abad",
-    "zurritestdemod:bloque_perryore"
+    "zurritestmod:bloque_abad",
+    "zurritestmod:bloque_perryore"
   ]
 }

@@ -5,10 +5,10 @@
   "experience": 1,
   "group": "Perry",
   "ingredient": {
-    "item": "zurritestdemod:perryore"
+    "item": "zurritestmod:perryore"
   },
   "result": {
     "count": 1,
-    "id": "zurritestdemod:perrylingote"
+    "id": "zurritestmod:perrylingote"
   }
 }

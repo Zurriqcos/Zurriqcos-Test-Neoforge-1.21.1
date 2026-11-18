@@ -4,11 +4,11 @@
   "group": "Perry",
   "ingredients": [
     {
-      "item": "zurritestdemod:bloque_abad"
+      "item": "zurritestmod:bloque_abad"
     }
   ],
   "result": {
     "count": 9,
-    "id": "zurritestdemod:perryore"
+    "id": "zurritestmod:perrylingote"
   }
 }

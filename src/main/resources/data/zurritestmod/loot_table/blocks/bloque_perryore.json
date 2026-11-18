@@ -40,7 +40,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "zurritestdemod:perryore"
+              "name": "zurritestmod:perryore"
             }
           ]
         }
@@ -48,5 +48,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "zurritestdemod:blocks/bloque_perryore"
+  "random_sequence": "zurritestmod:blocks/bloque_perryore"
 }

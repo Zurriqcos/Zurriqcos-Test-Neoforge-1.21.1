@@ -2,17 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "zurritestdemod:perrylingote"
+    "A": {
+      "item": "zurritestmod:perrylingote"
     }
   },
   "pattern": [
-    "BBB",
-    "BBB",
-    "BBB"
+    "AAA",
+    "AAA",
+    "AAA"
   ],
   "result": {
     "count": 1,
-    "id": "zurritestdemod:abad_bloque"
+    "id": "zurritestmod:bloque_abad"
   }
 }

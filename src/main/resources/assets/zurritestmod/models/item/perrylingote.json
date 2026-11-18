@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "zurritestdemod:item/perryoreimg"
+      "layer0": "zurritestmod:item/perrylingoteimg"
   }
 }

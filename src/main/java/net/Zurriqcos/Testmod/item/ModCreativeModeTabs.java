@@ -18,10 +18,11 @@ public class ModCreativeModeTabs {
 
     public static Supplier<CreativeModeTab> PERRY_MENU_CREATIVO = CREATIVE_MOD_TAB.register("perrymenucreativo",
             () -> CreativeModeTab.builder().icon(()  -> new ItemStack(ModItems.Item1.get()))
-                    .title(Component.translatable("creativetab.zurritestdemod.perrymenu"))
+                    .title(Component.translatable("creativetab.zurritestmod.perrymenu"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.Item1);
                         output.accept(ModItems.Item2);
+                        output.accept(ModItems.Item3);
                         output.accept(ModBlocks.ABADBLOQUE);
                         output.accept(ModBlocks.PERRYOREBLOQUE);
                     })
