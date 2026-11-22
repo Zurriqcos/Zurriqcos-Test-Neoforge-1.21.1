@@ -2,11 +2,10 @@ package net.Zurriqcos.Testmod.item.custom;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.SlotAccess;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.ClickAction;
-import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -14,6 +13,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
@@ -29,8 +29,11 @@ public class MidasWandItem extends Item {
                     Items.MELON_SLICE, Items.GLISTERING_MELON_SLICE,
                     Items.IRON_BLOCK, Items.GOLD_BLOCK,
                     Items.IRON_INGOT, Items.GOLD_INGOT,
-                    Items.IRON_NUGGET, Items.GOLD_NUGGET,
-                    Items.IRON_HORSE_ARMOR, Items.GOLDEN_HORSE_ARMOR
+                    Items.IRON_HORSE_ARMOR, Items.GOLDEN_HORSE_ARMOR,
+                    Items.IRON_ORE, Items.GOLD_ORE,
+                    Items.RAW_IRON_BLOCK, Items.RAW_GOLD_BLOCK,
+                    Items.DEEPSLATE_IRON_ORE, Items.DEEPSLATE_GOLD_ORE,
+                    Items.RAW_IRON, Items.RAW_GOLD
             );
 
     private static final Map<Block, Block> BLOCK_MAP =
@@ -57,19 +60,18 @@ public class MidasWandItem extends Item {
         return super.useOn(context);
     }
 
-     @Override
-    public boolean overrideStackedOnOther(ItemStack stack, Slot slot, ClickAction action, Player player) {
-        Item clickeditem = stack.getItem();
 
-        if(FOOD_MAP.containsKey(clickeditem)){
-            int aux = stack.getCount();
-            slot.remove(aux);
+    @Override
+    public InteractionResultHolder<ItemStack> use(@NotNull Level level, Player player, @NotNull InteractionHand usedHand) {
+        //iteramos en el inventario del jugador
+        for (int i = 0; i < player.getInventory().items.size(); i++) {
 
-            player.addItem(new ItemStack(FOOD_MAP.get(clickeditem), aux));
+            if (FOOD_MAP.containsKey(player.getInventory().items.get(i).getItem())) {
 
-            player.playSound(SoundEvents.ENCHANTMENT_TABLE_USE);
+                player.getInventory().setItem(i, new ItemStack(FOOD_MAP.get(player.getInventory().items.get(i).getItem()))); ;
+                player.playSound(SoundEvents.ENCHANTMENT_TABLE_USE);
+            }
         }
-
-        return super.overrideStackedOnOther(stack, slot, action, player);
+        return super.use(level, player, usedHand);
     }
 }
