@@ -23,8 +23,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.Item1);
                         output.accept(ModItems.Item2);
                         output.accept(ModItems.Item3);
+                        output.accept(ModItems.ABADLLETA);
                         output.accept(ModBlocks.ABADBLOQUE);
                         output.accept(ModBlocks.PERRYOREBLOQUE);
+                        output.accept(ModBlocks.PERRYOREBLOQUE);
+                        output.accept(ModBlocks.BLOQUETRANSMUTADOR);
                     })
 
                     .build());

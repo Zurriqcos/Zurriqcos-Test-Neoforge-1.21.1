@@ -2,10 +2,18 @@
   "item.zurritestmod.perryore": "Perry Ore",
   "item.zurritestmod.perrylingote": "Perry Ingot",
   "item.zurritestmod.midaswand": "Varita de Midas",
+  "item.zurritestmod.abadlleta": "Galleta del novio de Carla",
+
+  "tooltip.zurritestmod.midasWandItem.tooltip": "Bendicion o maldicion?",
+  "tooltip.zurritestmod.abadlleta.tooltip": "Sabe a bi",
 
 
   "block.zurritestmod.bloque_abad": "Bloque tato",
   "block.zurritestmod.bloque_perryore": "Bloque Perry Ore",
+  "block.zurritestmod.bloque_transmutador": "Transmutador",
+
+  "tooltip.zurritestmod.TransmuterBlock.tooltip": "Cambia cosas, como Dani de §cnovia§c",
+  "tooltip.zurritestmod.BLOQUEABAD.tooltip": "Pero quien es este tio???",
 
   "creativetab.zurritestmod.perrymenu": "Perry Mod"
 }
