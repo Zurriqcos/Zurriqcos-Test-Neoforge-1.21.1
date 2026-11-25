@@ -1,6 +1,0 @@
-{
-    "parent": "minecraft:block/cube_all",
-    "textures": {
-        "all": "zurritestmod:block/bloque_perryore_img"
-    }
-}
